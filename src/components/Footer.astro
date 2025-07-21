@@ -1,0 +1,115 @@
+---
+import { Github, Linkedin, Mail, MapPin, Code, Heart } from 'lucide-react';
+---
+
+<footer class="bg-gray-900 border-t border-gray-800">
+  <div class="container mx-auto px-6 py-12">
+    <div class="grid md:grid-cols-4 gap-8">
+      <!-- Brand -->
+      <div class="col-span-1 md:col-span-2">
+        <div class="flex items-center space-x-2 mb-4">
+          <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
+            <span class="text-white font-bold">A</span>
+          </div>
+          <span class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+            Atter.dev
+          </span>
+        </div>
+        <p class="text-gray-400 mb-6 max-w-md">
+          Full Stack Developer especializado en automatización, e-commerce y soluciones integradas. 
+          Transformando ideas en experiencias digitales extraordinarias.
+        </p>
+        
+        <div class="flex items-center space-x-2 text-gray-400 mb-4">
+          <MapPin class="w-4 h-4" />
+          <span>Huánuco, Perú</span>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+          <a 
+            href="https://github.com/atterdev" 
+            target="_blank"
+            class="text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-gray-800"
+            aria-label="GitHub"
+          >
+            <Github class="w-5 h-5" />
+          </a>
+          <a 
+            href="https://linkedin.com/in/atterbasilio" 
+            target="_blank"
+            class="text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-gray-800"
+            aria-label="LinkedIn"
+          >
+            <Linkedin class="w-5 h-5" />
+          </a>
+          <a 
+            href="mailto:hola@atter.dev"
+            class="text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-gray-800"
+            aria-label="Email"
+          >
+            <Mail class="w-5 h-5" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-white font-semibold mb-4">Enlaces rápidos</h4>
+        <ul class="space-y-3">
+          <li>
+            <a href="#services" class="text-gray-400 hover:text-white transition-colors">
+              Servicios
+            </a>
+          </li>
+          <li>
+            <a href="#projects" class="text-gray-400 hover:text-white transition-colors">
+              Proyectos
+            </a>
+          </li>
+          <li>
+            <a href="#tech" class="text-gray-400 hover:text-white transition-colors">
+              Tecnologías
+            </a>
+          </li>
+          <li>
+            <a href="#contact" class="text-gray-400 hover:text-white transition-colors">
+              Contacto
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h4 class="text-white font-semibold mb-4">Servicios</h4>
+        <ul class="space-y-3">
+          <li class="text-gray-400">Desarrollo Web</li>
+          <li class="text-gray-400">E-commerce</li>
+          <li class="text-gray-400">Automatización</li>
+          <li class="text-gray-400">Chatbots IA</li>
+          <li class="text-gray-400">Consultoría Tech</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between">
+      <div class="flex items-center space-x-2 text-gray-400 text-sm mb-4 md:mb-0">
+        <span>© 2025 Atter Basilio. Hecho con</span>
+        <Heart class="w-4 h-4 text-red-400" />
+        <span>y</span>
+        <Code class="w-4 h-4 text-blue-400" />
+        <span>usando Astro + Tailwind</span>
+      </div>
+      
+      <div class="text-gray-400 text-sm">
+        <a href="/privacy" class="hover:text-white transition-colors mr-4">
+          Privacidad
+        </a>
+        <a href="/terms" class="hover:text-white transition-colors">
+          Términos
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

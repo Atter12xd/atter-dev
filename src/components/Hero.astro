@@ -1,0 +1,53 @@
+---
+import TypeWriter from './ui/TypeWriter.jsx';
+---
+
+<section class="min-h-screen flex items-center justify-center relative overflow-hidden">
+  <!-- Fondo animado -->
+  <div class="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-gray-900"></div>
+  
+  <!-- Formas SVG animadas - Responsivas -->
+  <div class="absolute inset-0">
+    <svg class="absolute top-10 sm:top-20 left-4 sm:left-20 hero-shape text-blue-500/10 animate-pulse">
+      <circle cx="32" cy="32" r="24" fill="currentColor" class="sm:hidden"/>
+      <circle cx="64" cy="64" r="48" fill="currentColor" class="hidden sm:block"/>
+    </svg>
+    <svg class="absolute bottom-20 sm:bottom-32 right-4 sm:right-32 hero-shape text-purple-500/10 animate-bounce">
+      <rect width="48" height="48" fill="currentColor" rx="8" class="sm:hidden"/>
+      <rect width="96" height="96" fill="currentColor" rx="12" class="hidden sm:block"/>
+    </svg>
+  </div>
+
+  <div class="container mx-auto px-4 sm:px-6 text-center z-10">
+    <!-- Título principal - Responsivo -->
+    <h1 class="hero-title text-3xl sm:text-5xl lg:text-7xl font-bold mb-6 sm:mb-8">
+      Soy <span class="text-gradient">Atter Basilio</span>
+    </h1>
+    
+    <!-- Subtítulo con TypeWriter - Responsivo -->
+    <div class="hero-subtitle text-base sm:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 h-12 sm:h-16 px-2 sm:px-0">
+      <TypeWriter 
+        text="Full Stack Developer especializado en automatización, e-commerce y soluciones integradas para empresas modernas."
+        speed={5}
+        delay={100}
+        client:load
+      />
+    </div>
+
+    <!-- Botones - Responsivos -->
+    <div class="hero-buttons flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-md sm:max-w-none mx-auto">
+      <a 
+        href="#projects" 
+        class="hero-button bg-gradient-to-r from-blue-500 to-purple-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:scale-105 transition-transform text-center"
+      >
+        Ver mis proyectos
+      </a>
+      <a 
+        href="#contact" 
+        class="hero-button border border-gray-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors text-center"
+      >
+        Hablemos
+      </a>
+    </div>
+  </div>
+</section>

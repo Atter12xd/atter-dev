@@ -1,0 +1,387 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fuente personalizada */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Variables CSS personalizadas */
+:root {
+  --gradient-primary: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  --gradient-secondary: linear-gradient(135deg, #06b6d4, #3b82f6);
+  --glass-bg: rgba(31, 41, 55, 0.8);
+  --glass-border: rgba(75, 85, 99, 0.3);
+}
+
+/* Reset y base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  background: #030712;
+  color: #f9fafb;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 6px; /* Más delgado en móvil */
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #3b82f6, #8b5cf6);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #2563eb, #7c3aed);
+}
+
+/* Firefox scrollbar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 #1f2937;
+}
+
+/* Animaciones personalizadas */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.6), 0 0 40px rgba(139, 92, 246, 0.3);
+  }
+}
+
+/* Clases de utilidad personalizadas */
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-effect {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+}
+
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in-left {
+  animation: fadeInLeft 0.6s ease-out forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Efectos de partículas y formas */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.shape-blob {
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Loading states */
+.loading {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* ========================================
+   📱 OPTIMIZACIONES PARA MÓVILES
+======================================== */
+
+/* Pantallas muy pequeñas (320px - 480px) */
+@media (max-width: 480px) {
+  /* Contenedores más compactos */
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Textos más pequeños pero legibles */
+  .hero-title {
+    font-size: 2.5rem !important; /* ~40px */
+    line-height: 1.1 !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem !important; /* ~16px */
+    line-height: 1.4 !important;
+    padding: 0 0.5rem;
+  }
+  
+  /* Botones más accesibles */
+  .hero-buttons {
+    gap: 0.75rem !important;
+  }
+  
+  .hero-button {
+    padding: 0.75rem 1.5rem !important;
+    font-size: 0.9rem !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+  
+  /* Navegación más compacta */
+  .nav-brand {
+    font-size: 1.25rem !important;
+  }
+  
+  .nav-logo {
+    width: 2rem !important;
+    height: 2rem !important;
+  }
+  
+  /* Cards más espaciosas en móvil */
+  .mobile-card {
+    padding: 1.25rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  /* Grids que se vuelven columna única */
+  .mobile-stack {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  /* Formas SVG más pequeñas */
+  .hero-shape {
+    width: 4rem !important;
+    height: 4rem !important;
+  }
+  
+  .hero-shape.large {
+    width: 5rem !important;
+    height: 5rem !important;
+  }
+}
+
+/* Pantallas medianas (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .hero-title {
+    font-size: 3.5rem !important; /* ~56px */
+    line-height: 1.1 !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.125rem !important; /* ~18px */
+    line-height: 1.5 !important;
+  }
+  
+  .hero-buttons {
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 1rem !important;
+  }
+  
+  .hero-button {
+    padding: 0.875rem 2rem !important;
+    font-size: 1rem !important;
+    flex: none !important;
+    width: auto !important;
+  }
+}
+
+/* Optimizaciones de touch para móviles */
+@media (max-width: 768px) {
+  /* Áreas de touch más grandes */
+  button, 
+  a[role="button"],
+  .touchable {
+    min-height: 44px !important;
+    min-width: 44px !important;
+  }
+  
+  /* Efectos hover deshabilitados en touch */
+  .hover-lift:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  
+  /* Animaciones más suaves en móvil */
+  .animate-float {
+    animation-duration: 4s;
+  }
+  
+  /* Glassmorphism más sutil en móvil */
+  .glass-effect {
+    backdrop-filter: blur(8px);
+    background: rgba(31, 41, 55, 0.9);
+  }
+  
+  /* Espaciado vertical más compacto */
+  .section-mobile {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+  
+  /* Menú móvil mejorado */
+  .mobile-menu {
+    background: rgba(15, 23, 42, 0.95) !important;
+    backdrop-filter: blur(12px) !important;
+    border-top: 1px solid rgba(75, 85, 99, 0.3) !important;
+  }
+  
+  .mobile-menu a {
+    padding: 1rem 0 !important;
+    font-size: 1.125rem !important;
+    border-bottom: 1px solid rgba(75, 85, 99, 0.2);
+  }
+  
+  .mobile-menu a:last-child {
+    border-bottom: none;
+  }
+  
+  /* Stats cards más compactas */
+  .stats-mobile {
+    padding: 1.25rem !important;
+    text-align: center !important;
+  }
+  
+  .stats-number {
+    font-size: 2.5rem !important;
+  }
+  
+  .stats-label {
+    font-size: 0.875rem !important;
+  }
+}
+
+/* Landscape móviles */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-title {
+    font-size: 2.5rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .hero-buttons {
+    margin-top: 1rem !important;
+  }
+}
+
+/* Mejoras de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+  
+  .animate-float,
+  .animate-fade-in-up,
+  .animate-fade-in-left {
+    animation: none !important;
+  }
+}
+
+/* Estilos para focus mejorados en móvil */
+@media (max-width: 768px) {
+  *:focus-visible {
+    outline: 3px solid #3b82f6 !important;
+    outline-offset: 2px !important;
+  }
+}
+
+/* Alto contraste para mejor legibilidad */
+@media (prefers-contrast: high) {
+  .text-gradient {
+    background: linear-gradient(135deg, #60a5fa, #a78bfa) !important;
+  }
+  
+  .glass-effect {
+    background: rgba(31, 41, 55, 0.95) !important;
+    border-color: rgba(75, 85, 99, 0.8) !important;
+  }
+}

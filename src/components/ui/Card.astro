@@ -1,0 +1,22 @@
+---
+export interface Props {
+  class?: string;
+  hover?: boolean;
+  glass?: boolean;
+}
+
+const { 
+  class: className = '', 
+  hover = true, 
+  glass = false 
+} = Astro.props;
+
+const baseClasses = 'rounded-xl p-6 transition-all duration-300';
+const hoverClasses = hover ? 'hover-lift' : '';
+const glassClasses = glass ? 'glass-effect' : 'bg-gray-800/50';
+const classes = `${baseClasses} ${glassClasses} ${hoverClasses} ${className}`;
+---
+
+<div class={classes}>
+  <slot />
+</div>

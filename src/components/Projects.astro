@@ -1,0 +1,478 @@
+---
+import { ExternalLink, Github, Eye, X, ZoomIn } from 'lucide-react';
+---
+
+<section id="projects" class="py-20">
+  <div class="container mx-auto px-4 sm:px-6">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16">
+      <span class="text-gradient">
+        Proyectos y Diseños Destacados
+      </span>
+    </h2>
+
+    <div class="grid gap-8 lg:gap-12">
+      <!-- VerifyCodOrders -->
+      <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 hover:border-blue-500/30 transition-all duration-500">
+        <div class="grid lg:grid-cols-2 gap-0">
+          <!-- Imagen del proyecto -->
+          <div class="relative overflow-hidden lg:order-1">
+            <div class="aspect-video lg:aspect-square bg-gradient-to-br from-blue-600/20 to-purple-600/20 flex items-center justify-center relative">
+              <!-- Imagen con mejor object-fit -->
+              <img 
+                src="/public/public/projects/verifycodorders.png" 
+                alt="VerifyCodOrders Platform"
+                class="w-full h-full object-contain sm:object-cover transition-transform duration-700 group-hover:scale-105 cursor-pointer"
+                loading="lazy"
+                onclick="openModal('modal-verify')"
+              />
+              <!-- Overlay de hover mejorado -->
+              <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <div class="flex gap-3">
+                  <button 
+                    onclick="openModal('modal-verify')"
+                    class="bg-white/20 backdrop-blur-sm p-3 rounded-lg hover:bg-white/30 transition-colors"
+                    title="Ver imagen completa"
+                  >
+                    <ZoomIn class="w-6 h-6 text-white" />
+                  </button>
+                  <a 
+                    href="https://verifycodorders.com" 
+                    target="_blank"
+                    class="bg-white/20 backdrop-blur-sm p-3 rounded-lg hover:bg-white/30 transition-colors"
+                    title="Visitar sitio web"
+                  >
+                    <ExternalLink class="w-6 h-6 text-white" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Contenido del proyecto -->
+          <div class="p-6 sm:p-8 lg:order-2 flex flex-col justify-center">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-2xl">🔗</span>
+              <h3 class="text-xl sm:text-2xl font-bold text-white">VerifyCodOrders.com</h3>
+            </div>
+            
+            <p class="text-gray-300 mb-6 text-sm sm:text-base leading-relaxed">
+              Plataforma de verificación de pedidos contra fraudes con integración a Shopify, Supabase y chatbot IA. Sistema completo de análisis de riesgo en tiempo real.
+            </p>
+            
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">Astro</span>
+              <span class="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">Tailwind</span>
+              <span class="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">Supabase</span>
+              <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">n8n</span>
+              <span class="bg-orange-500/20 text-orange-300 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">OpenAI</span>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <a 
+                href="https://verifycodorders.com" 
+                target="_blank"
+                class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:scale-105 transition-transform text-sm sm:text-base"
+              >
+                <ExternalLink class="w-4 h-4" />
+                Ver proyecto
+              </a>
+              <button 
+                onclick="openModal('modal-verify')"
+                class="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm"
+              >
+                <ZoomIn class="w-4 h-4" />
+                Ver diseño completo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CheaperBuy -->
+      <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 hover:border-green-500/30 transition-all duration-500">
+        <div class="grid lg:grid-cols-2 gap-0">
+          <!-- Contenido del proyecto -->
+          <div class="p-6 sm:p-8 flex flex-col justify-center">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-2xl">🛒</span>
+              <h3 class="text-xl sm:text-2xl font-bold text-white">CheaperBuy.online</h3>
+            </div>
+            
+            <p class="text-gray-300 mb-6 text-sm sm:text-base leading-relaxed">
+              Tienda Shopify con optimización SEO, automatización de inventario y chatbot embebido. Experiencia de compra optimizada para conversión.
+            </p>
+            
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">Shopify CLI</span>
+              <span class="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">React</span>
+              <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">App Bridge</span>
+              <span class="bg-red-500/20 text-red-300 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">n8n</span>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <a 
+                href="https://cheaperbuy.online" 
+                target="_blank"
+                class="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-teal-600 text-white px-4 py-2 rounded-lg font-semibold hover:scale-105 transition-transform text-sm sm:text-base"
+              >
+                <ExternalLink class="w-4 h-4" />
+                Ver proyecto
+              </a>
+              <button 
+                onclick="openModal('modal-cheaper')"
+                class="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm"
+              >
+                <ZoomIn class="w-4 h-4" />
+                Ver diseño completo
+              </button>
+            </div>
+          </div>
+          
+          <!-- Imagen del proyecto -->
+          <div class="relative overflow-hidden">
+            <div class="aspect-video lg:aspect-square bg-gradient-to-br from-green-600/20 to-teal-600/20 flex items-center justify-center relative">
+              <img 
+                src="/public/public/projects/cheaperbuy.png" 
+                alt="CheaperBuy E-commerce"
+                class="w-full h-full object-contain sm:object-cover transition-transform duration-700 group-hover:scale-105 cursor-pointer"
+                loading="lazy"
+                onclick="openModal('modal-cheaper')"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <div class="flex gap-3">
+                  <button 
+                    onclick="openModal('modal-cheaper')"
+                    class="bg-white/20 backdrop-blur-sm p-3 rounded-lg hover:bg-white/30 transition-colors"
+                  >
+                    <ZoomIn class="w-6 h-6 text-white" />
+                  </button>
+                  <a 
+                    href="https://cheaperbuy.online" 
+                    target="_blank"
+                    class="bg-white/20 backdrop-blur-sm p-3 rounded-lg hover:bg-white/30 transition-colors"
+                  >
+                    <ExternalLink class="w-6 h-6 text-white" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LussoZenith -->
+      <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 hover:border-purple-500/30 transition-all duration-500">
+        <div class="grid lg:grid-cols-2 gap-0">
+          <!-- Imagen del proyecto -->
+          <div class="relative overflow-hidden lg:order-1">
+            <div class="aspect-video lg:aspect-square bg-gradient-to-br from-purple-600/20 to-pink-600/20 flex items-center justify-center relative">
+              <img 
+                src="/public/public/projects/lussozenith.png" 
+                alt="LussoZenith Luxury Store"
+                class="w-full h-full object-contain sm:object-cover transition-transform duration-700 group-hover:scale-105 cursor-pointer"
+                loading="lazy"
+                onclick="openModal('modal-lusso')"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <div class="flex gap-3">
+                  <button 
+                    onclick="openModal('modal-lusso')"
+                    class="bg-white/20 backdrop-blur-sm p-3 rounded-lg hover:bg-white/30 transition-colors"
+                  >
+                    <ZoomIn class="w-6 h-6 text-white" />
+                  </button>
+                  <a 
+                    href="https://lussozenith.com" 
+                    target="_blank"
+                    class="bg-white/20 backdrop-blur-sm p-3 rounded-lg hover:bg-white/30 transition-colors"
+                  >
+                    <ExternalLink class="w-6 h-6 text-white" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Contenido del proyecto -->
+          <div class="p-6 sm:p-8 lg:order-2 flex flex-col justify-center">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-2xl">💎</span>
+              <h3 class="text-xl sm:text-2xl font-bold text-white">LussoZenith.com</h3>
+            </div>
+            
+            <p class="text-gray-300 mb-6 text-sm sm:text-base leading-relaxed">
+              Experiencia de compra de lujo con automatización de pedidos y diseño premium. Plataforma exclusiva para productos de alta gama.
+            </p>
+            
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="bg-gray-500/20 text-gray-300 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">Next.js</span>
+              <span class="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">Tailwind</span>
+              <span class="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">Supabase</span>
+              <span class="bg-green-600/20 text-green-400 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">Shopify</span>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <a 
+                href="https://lussozenith.com" 
+                target="_blank"
+                class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-lg font-semibold hover:scale-105 transition-transform text-sm sm:text-base"
+              >
+                <ExternalLink class="w-4 h-4" />
+                Ver proyecto
+              </a>
+              <button 
+                onclick="openModal('modal-lusso')"
+                class="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm"
+              >
+                <ZoomIn class="w-4 h-4" />
+                Ver diseño completo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CenterTrading -->
+      <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 hover:border-orange-500/30 transition-all duration-500">
+        <div class="grid lg:grid-cols-2 gap-0">
+          <!-- Contenido del proyecto -->
+          <div class="p-6 sm:p-8 flex flex-col justify-center">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-2xl">🏢</span>
+              <h3 class="text-xl sm:text-2xl font-bold text-white">CenterTradingCorporation.com</h3>
+            </div>
+            
+            <p class="text-gray-300 mb-6 text-sm sm:text-base leading-relaxed">
+              Web institucional con catálogo digital y diseño adaptado al sector corporativo. Portal empresarial completo con gestión de contenidos.
+            </p>
+            
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">Astro</span>
+              <span class="bg-orange-500/20 text-orange-300 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">HTML</span>
+              <span class="bg-blue-600/20 text-blue-400 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">CSS</span>
+              <span class="bg-yellow-500/20 text-yellow-300 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">JavaScript</span>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <a 
+                href="https://centertradingcorporation.com" 
+                target="_blank"
+                class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-2 rounded-lg font-semibold hover:scale-105 transition-transform text-sm sm:text-base"
+              >
+                <ExternalLink class="w-4 h-4" />
+                Ver proyecto
+              </a>
+              <button 
+                onclick="openModal('modal-center')"
+                class="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm"
+              >
+                <ZoomIn class="w-4 h-4" />
+                Ver diseño completo
+              </button>
+            </div>
+          </div>
+          
+          <!-- Imagen del proyecto -->
+          <div class="relative overflow-hidden">
+            <div class="aspect-video lg:aspect-square bg-gradient-to-br from-orange-600/20 to-red-600/20 flex items-center justify-center relative">
+              <img 
+                src="/public/public/projects/centertrading.png" 
+                alt="Center Trading Corporation"
+                class="w-full h-full object-contain sm:object-cover transition-transform duration-700 group-hover:scale-105 cursor-pointer"
+                loading="lazy"
+                onclick="openModal('modal-center')"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <div class="flex gap-3">
+                  <button 
+                    onclick="openModal('modal-center')"
+                    class="bg-white/20 backdrop-blur-sm p-3 rounded-lg hover:bg-white/30 transition-colors"
+                  >
+                    <ZoomIn class="w-6 h-6 text-white" />
+                  </button>
+                  <a 
+                    href="https://centertradingcorporation.com" 
+                    target="_blank"
+                    class="bg-white/20 backdrop-blur-sm p-3 rounded-lg hover:bg-white/30 transition-colors"
+                  >
+                    <ExternalLink class="w-6 h-6 text-white" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to action -->
+    <div class="mt-16 text-center">
+      <p class="text-gray-400 mb-6">¿Tienes un proyecto en mente?</p>
+      <a 
+        href="#contact" 
+        class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:scale-105 transition-transform"
+      >
+        Hablemos de tu idea
+        <ExternalLink class="w-5 h-5" />
+      </a>
+    </div>
+  </div>
+
+  <!-- Modales para ver imágenes completas -->
+  <!-- Modal VerifyCodOrders -->
+  <div id="modal-verify" class="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="relative max-w-6xl max-h-[90vh] w-full">
+      <button 
+        onclick="closeModal('modal-verify')" 
+        class="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors z-10"
+      >
+        <X class="w-8 h-8" />
+      </button>
+      <img 
+        src="/public/public/projects/verifycodorders.png" 
+        alt="VerifyCodOrders Platform - Vista completa"
+        class="w-full h-full object-contain rounded-lg"
+      />
+      <div class="absolute bottom-4 left-4 bg-black/70 backdrop-blur-sm rounded-lg p-4">
+        <h3 class="text-white font-semibold mb-2">VerifyCodOrders.com</h3>
+        <a 
+          href="https://verifycodorders.com" 
+          target="_blank"
+          class="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
+        >
+          <ExternalLink class="w-4 h-4" />
+          Visitar sitio web
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal CheaperBuy -->
+  <div id="modal-cheaper" class="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="relative max-w-6xl max-h-[90vh] w-full">
+      <button 
+        onclick="closeModal('modal-cheaper')" 
+        class="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors z-10"
+      >
+        <X class="w-8 h-8" />
+      </button>
+      <img 
+        src="/public/public/projects/cheaperbuy.png" 
+        alt="CheaperBuy E-commerce - Vista completa"
+        class="w-full h-full object-contain rounded-lg"
+      />
+      <div class="absolute bottom-4 left-4 bg-black/70 backdrop-blur-sm rounded-lg p-4">
+        <h3 class="text-white font-semibold mb-2">CheaperBuy.online</h3>
+        <a 
+          href="https://cheaperbuy.online" 
+          target="_blank"
+          class="inline-flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors"
+        >
+          <ExternalLink class="w-4 h-4" />
+          Visitar sitio web
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal LussoZenith -->
+  <div id="modal-lusso" class="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="relative max-w-6xl max-h-[90vh] w-full">
+      <button 
+        onclick="closeModal('modal-lusso')" 
+        class="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors z-10"
+      >
+        <X class="w-8 h-8" />
+      </button>
+      <img 
+        src="/public/public/projects/lussozenith.png" 
+        alt="LussoZenith Luxury Store - Vista completa"
+        class="w-full h-full object-contain rounded-lg"
+      />
+      <div class="absolute bottom-4 left-4 bg-black/70 backdrop-blur-sm rounded-lg p-4">
+        <h3 class="text-white font-semibold mb-2">LussoZenith.com</h3>
+        <a 
+          href="https://lussozenith.com" 
+          target="_blank"
+          class="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
+        >
+          <ExternalLink class="w-4 h-4" />
+          Visitar sitio web
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal CenterTrading -->
+  <div id="modal-center" class="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="relative max-w-6xl max-h-[90vh] w-full">
+      <button 
+        onclick="closeModal('modal-center')" 
+        class="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors z-10"
+      >
+        <X class="w-8 h-8" />
+      </button>
+      <img 
+        src="/public/public/projects/centertrading.png" 
+        alt="Center Trading Corporation - Vista completa"
+        class="w-full h-full object-contain rounded-lg"
+      />
+      <div class="absolute bottom-4 left-4 bg-black/70 backdrop-blur-sm rounded-lg p-4">
+        <h3 class="text-white font-semibold mb-2">CenterTradingCorporation.com</h3>
+        <a 
+          href="https://centertradingcorporation.com" 
+          target="_blank"
+          class="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 transition-colors"
+        >
+          <ExternalLink class="w-4 h-4" />
+          Visitar sitio web
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Funciones para abrir y cerrar modales
+  function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden'; // Prevenir scroll del body
+    }
+  }
+
+  function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = 'auto'; // Restaurar scroll del body
+    }
+  }
+
+  // Cerrar modal al hacer click fuera de la imagen
+  document.querySelectorAll('[id^="modal-"]').forEach(modal => {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal(modal.id);
+      }
+    });
+  });
+
+  // Cerrar modal con tecla Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('[id^="modal-"]').forEach(modal => {
+        if (!modal.classList.contains('hidden')) {
+          closeModal(modal.id);
+        }
+      });
+    }
+  });
+
+  // Hacer funciones globales
+  window.openModal = openModal;
+  window.closeModal = closeModal;
+</script>
